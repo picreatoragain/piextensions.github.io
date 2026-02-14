@@ -1,0 +1,15 @@
+<head>
+  <title> test </title>
+</head>
+<body>
+<input type="text" value="test" id="myInput">
+<button onclick="myFunction()">Copy js text</button>
+<javascript>
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+  navigator.clipboard.writeText(copyText.value);
+  alert("Copied the text: " + copyText.value);
+</javascript>
+  
+</body>
